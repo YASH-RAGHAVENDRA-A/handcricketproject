@@ -1,0 +1,94 @@
+Match Result:
+yash: 1 runs
+yashas: 10 runs
+Winner: yashas
+-----------------------------
+Match Result:
+virat: 18 runs
+rohit: 20 runs
+Winner: rohit
+-----------------------------
+🏏 Match Summary:
+Team 1 (yash & vel): 27 runs
+  yash - 6 runs, 1 balls, SR: 600.00
+  vel - 27 runs, 5 balls, SR: 540.00
+Team 2 (aryan & giri): 24 runs
+  aryan - 22 runs, 5 balls, SR: 440.00
+  giri - 10 runs, 4 balls, SR: 250.00
+
+Bowler Stats:
+  yash - 1 wickets
+  vel - 1 wickets
+  aryan - 1 wickets
+  giri - 0 wickets
+
+Input Frequency:
+yash: 1(0x) 2(1x) 3(1x) 4(0x) 5(1x) 6(3x) 
+vel: 1(1x) 2(2x) 3(0x) 4(0x) 5(4x) 6(2x) 
+aryan: 1(0x) 2(1x) 3(1x) 4(4x) 5(2x) 6(4x) 
+giri: 1(0x) 2(1x) 3(1x) 4(1x) 5(0x) 6(0x) 
+🏁 Winner: Team 1
+-----------------------------------
+🏏 Match Summary:
+Team 1 (aryan & giri): 15 runs
+  aryan - 10 runs, 3 balls, SR: 333.33
+  giri - 10 runs, 2 balls, SR: 500.00
+Team 2 (vel  & yash): 17 runs
+  vel  - 17 runs, 5 balls, SR: 340.00
+  yash - 0 runs, 0 balls, SR: 0.00
+
+Bowler Stats:
+  aryan - 0 wickets
+  giri - 0 wickets
+  vel  - 2 wickets
+  yash - 0 wickets
+
+Input Frequency:
+aryan: 1(1x) 2(0x) 3(5x) 4(0x) 5(1x) 6(1x) 
+giri: 1(0x) 2(0x) 3(0x) 4(1x) 5(0x) 6(1x) 
+vel : 1(1x) 2(1x) 3(0x) 4(4x) 5(3x) 6(1x) 
+yash: 1(0x) 2(0x) 3(0x) 4(0x) 5(0x) 6(0x) 
+🏁 Winner: Team 2
+-----------------------------------
+🏏 Match Summary:
+Team 1 (vikas  & vasu): 6 runs
+  vikas  - 9 runs, 2 balls, SR: 450.00
+  vasu - 5 runs, 1 balls, SR: 500.00
+Team 2 (yash & yashas): 4 runs
+  yash - 6 runs, 2 balls, SR: 300.00
+  yashas - 5 runs, 2 balls, SR: 250.00
+
+Bowler Stats:
+  vikas  - 2 wickets
+  vasu - 0 wickets
+  yash - 2 wickets
+  yashas - 0 wickets
+
+Input Frequency:
+vikas : 1(1x) 2(0x) 3(1x) 4(0x) 5(1x) 6(1x) 
+vasu: 1(0x) 2(1x) 3(1x) 4(0x) 5(1x) 6(0x) 
+yash: 1(0x) 2(1x) 3(1x) 4(3x) 5(2x) 6(0x) 
+yashas: 1(0x) 2(0x) 3(0x) 4(0x) 5(0x) 6(0x) 
+🏁 Winner: Team 1
+-----------------------------------
+🏏 Match Summary:
+Team 1 (yashas & yashas): 19 runs
+  yashas - 22 runs, 7 balls, SR: 314.29
+  yashas - 6 runs, 1 balls, SR: 600.00
+Team 2 (yash yash & yyash): 21 runs
+  yash yash - 20 runs, 6 balls, SR: 333.33
+  yyash - 4 runs, 1 balls, SR: 400.00
+
+Bowler Stats:
+  yashas - 1 wickets
+  yashas - 0 wickets
+  yash yash - 0 wickets
+  yyash - 2 wickets
+
+Input Frequency:
+yashas: 1(2x) 2(3x) 3(2x) 4(3x) 5(2x) 6(1x) 
+yashas: 1(0x) 2(0x) 3(0x) 4(1x) 5(0x) 6(1x) 
+yash yash: 1(3x) 2(1x) 3(4x) 4(2x) 5(2x) 6(0x) 
+yyash: 1(0x) 2(1x) 3(1x) 4(0x) 5(0x) 6(1x) 
+🏁 Winner: Team 2
+-----------------------------------
