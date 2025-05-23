@@ -25,7 +25,7 @@ void printHeader() {
     printf("--------\n\n");
 }
 
-void inputPlayerNames() {
+void playernames() {
     printf("Enter player names for Team 1:\n");
     for (int i = 0; i < PLAYERS_PER_TEAM; i++) {
         printf("Player %d: ", i + 1);
@@ -56,7 +56,7 @@ int toss() {
     }
 }
 
-int chooseBatOrBowl(char captainName[]) {
+int chooseto(char captainName[]) {
     int choice;
     printf("%s, choose:\n", captainName);
     printf("0. Bat first\n");
@@ -90,7 +90,7 @@ int bowling(const char* playerName) {
     return num;
 }
 
-int playInnings(
+int playgame(
     char battingTeam[][50], char bowlingTeam[][50], int targetToChase,
     BatterStats batterStats[], BowlerStats bowlerStats[], FrequencyStats freqStats[]
 ) {
@@ -140,7 +140,7 @@ int playInnings(
     return totalRuns;
 }
 
-void saveToFile(
+void savetofile(
     char winner[], int team1Score, int team2Score,
     BatterStats team1Batters[], BatterStats team2Batters[],
     BowlerStats team1Bowlers[], BowlerStats team2Bowlers[],
@@ -188,7 +188,7 @@ void saveToFile(
     printf(" Detailed match result saved to 'hand_cricket_score.txt'\n");
 }
 
-void showFinalResult(int team1Score, int team2Score,
+void showresult(int team1Score, int team2Score,
     BatterStats team1Batters[], BatterStats team2Batters[],
     BowlerStats team1Bowlers[], BowlerStats team2Bowlers[],
     FrequencyStats freqStats[]) {
@@ -201,13 +201,13 @@ void showFinalResult(int team1Score, int team2Score,
 
     if (team1Score > team2Score) {
         printf(" Team 1 Wins! (%s & %s)\n", team1[0], team1[1]);
-        saveToFile("Team 1", team1Score, team2Score, team1Batters, team2Batters, team1Bowlers, team2Bowlers, freqStats);
+        savetofile("Team 1", team1Score, team2Score, team1Batters, team2Batters, team1Bowlers, team2Bowlers, freqStats);
     } else if (team2Score > team1Score) {
         printf("Team 2 Wins! (%s & %s)\n", team2[0], team2[1]);
-        saveToFile("Team 2", team1Score, team2Score, team1Batters, team2Batters, team1Bowlers, team2Bowlers, freqStats);
+        savetofile("Team 2", team1Score, team2Score, team1Batters, team2Batters, team1Bowlers, team2Bowlers, freqStats);
     } else {
         printf(" It's a Tie!\n");
-        saveToFile("Tie", team1Score, team2Score, team1Batters, team2Batters, team1Bowlers, team2Bowlers, freqStats);
+        savetofile("Tie", team1Score, team2Score, team1Batters, team2Batters, team1Bowlers, team2Bowlers, freqStats);
     }
 }
 
@@ -223,14 +223,14 @@ int main() {
     FrequencyStats freqStats[4] = {{{0}}};
 
     printHeader();
-    inputPlayerNames();
+    playernames();
     tossWinner = toss();
 
     if (tossWinner == 1) {
-        choice = chooseBatOrBowl(team1[0]);
+        choice = chooseto(team1[0]);
         team1BatsFirst = (choice == 0);
     } else {
-        choice = chooseBatOrBowl(team2[0]);
+        choice = chooseto(team2[0]);
         team1BatsFirst = !(choice == 0);
     }
 
@@ -238,18 +238,18 @@ int main() {
 
     if (team1BatsFirst) {
         printf("\n-- First Innings: Team 1 Batting --\n");
-        team1Score = playInnings(team1, team2, -1, team1Batters, team2Bowlers, freqStats);
+        team1Score = playgame(team1, team2, -1, team1Batters, team2Bowlers, freqStats);
 
         printf("\n-- Second Innings: Team 2 Batting --\n");
-        team2Score = playInnings(team2, team1, team1Score, team2Batters, team1Bowlers, freqStats);
+        team2Score = playgame(team2, team1, team1Score, team2Batters, team1Bowlers, freqStats);
     } else {
         printf("\n-- First Innings: Team 2 Batting --\n");
-        team2Score = playInnings(team2, team1, -1, team2Batters, team1Bowlers, freqStats);
+        team2Score = playgame(team2, team1, -1, team2Batters, team1Bowlers, freqStats);
 
         printf("\n-- Second Innings: Team 1 Batting --\n");
-        team1Score = playInnings(team1, team2, team2Score, team1Batters, team2Bowlers, freqStats);
+        team1Score = playgame(team1, team2, team2Score, team1Batters, team2Bowlers, freqStats);
     }
 
-    showFinalResult(team1Score, team2Score, team1Batters, team2Batters, team1Bowlers, team2Bowlers, freqStats);
+    showresult(team1Score, team2Score, team1Batters, team2Batters, team1Bowlers, team2Bowlers, freqStats);
     return 0;
 }
